@@ -1,0 +1,13 @@
+diff --git a/gns3/main.py b/gns3/main.py
+index db82469a..f039eaf8 100644
+--- a/gns3/main.py
++++ b/gns3/main.py
+@@ -146,6 +146,8 @@ def main():
+                 os.path.normpath(os.path.join(frozen_dir, 'vpcs')),
+                 os.path.normpath(os.path.join(frozen_dir, 'traceng'))
+             ]
++        else:
++            frozen_dirs = [frozen_dir]
+ 
+         os.environ["PATH"] = os.pathsep.join(frozen_dirs) + os.pathsep + os.environ.get("PATH", "")
+ 
