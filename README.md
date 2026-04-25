@@ -82,3 +82,8 @@ cp -r dist/gns3-ui/* GNS3.AppDir/usr/bin/
 cp gns3-gui.desktop GNS3.AppDir/AppRun
 ```
 
+10. Generate the AppImage
+
+```bash
+ARCH=x86_64 ./appimagetool-x86_64.AppImage GNS3.AppDir
+```
