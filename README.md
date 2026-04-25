@@ -61,3 +61,24 @@ pyinstaller --onedir \
     --copy-metadata PyQt6 \
     gns3/main.py
 ```
+
+7. AppImage Tooling
+
+```bash
+wget https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
+chmod +x appimagetool-x86_64.AppImage
+```
+
+8. Create AppDir
+
+```bash
+mkdir -p GNS3.AppDir/usr/bin
+cp -r dist/gns3-ui/* GNS3.AppDir/usr/bin/
+```
+
+9. Copy desktop file
+
+```bash
+cp gns3-gui.desktop GNS3.AppDir/AppRun
+```
+
